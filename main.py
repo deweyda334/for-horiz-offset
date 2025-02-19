@@ -27,17 +27,19 @@ def main():
     while running:
         running = handle_events()
         screen.fill(config.WHITE) # Use color from config
+
+        # Add variable for line thickness
         
+        thickness = 3
 
+        # pygame.draw.line(screen, config.RED, start_pos, end_pos, thickness) 
 
+        # Draw on the screen multiple lines starting from (0, 10) to (100, 110)
+        # Each line will have a width of 2 pixels
+        thickness = 2 # In pixels
+        for x_offset in range(0, 300, 50):
+            pygame.draw.line(screen, config.RED, [0 + x_offset, 10], [100+ x_offset, 110], thickness)
 
-
-
-
-        
-        
-        
-        
         pygame.display.flip()
 
         # Limit the frame rate to the specified frames per second (FPS) 
