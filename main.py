@@ -28,6 +28,12 @@ def main():
         running = handle_events()
         screen.fill(config.WHITE) # Use color from config
         
+
+
+
+
+
+
         
         
         
